@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/app.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h2>CGPA Calculator</h2>
+      <small>Al-Amin Fakir</small>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/calculate" method="POST">
+        <div class="header">
+      <h3> Semesters</h3>
+      
+    </div>
+        <div class="form-group">
+          <label for="Number One">Enter 1st SGPA </label>
+          <input type="text" placeholder="Grade" name="num1" />
+        </div>
+
+        <div class="form-group">
+          <label for="Number Two">Enter 2nd SGPA  </label>
+          <input type="text" placeholder="Grade" name="num2" />
+        </div>
+        <div class="form-group">
+          <label for="Number Three">Enter 3rd SGPA  </label>
+          <input type="text" placeholder="Grade" name="num3" />
+        </div>
+        <div class="form-group">
+          <label for="Number Four">Enter 4th SGPA  </label>
+          <input type="text" placeholder="Grade" name="num4" />
+        </div>
+          <input type="submit" value="Calculate Your CGPA" id="calc_btn" class="btn" />
+        <br />
+         <div class="alert">
+          {{ result }}
+        </div>
+        </div>
+   
+         </div>
+       
+      </form>
+    </div>
+  </body>
+</html>
